@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>我的个人信息</title>
+    <script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../js/iframe.js"></script>
+    <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="../../js/messages_cn.js"></script>
+
+    <script type="text/javascript" src="../../js/myInfo.js"></script>
+    <link rel="stylesheet" type="text/css" href="../../css/myInfo.css" media="all">
+</head>
+<body class="user-info">
+<div class="main">
+
+    <!-- Content Start -->
+    <form action="" method="post"
+          target="content-iframe" id="forms">
+        <input name="proviceName" id="proviceName" type="hidden">
+        <input name="cityName" id="cityName" type="hidden">
+        <input name="areaName" id="areaName" type="hidden">
+
+        <div class="content">
+            <div class="tab-main">
+                <input name="hnUserId" id="hnUserId" value="511891" type="hidden">
+
+                <div class="fieldline">
+                    <div class="c1">用户名：</div>
+                    <div class="c2">
+                        <input maxlength="32" placeholder="用户名" id="userName" name="userName" value="dcdddd"
+                               class="txt" type="text">&nbsp;&nbsp;<em class="star">*</em>
+                    </div>
+                    <span class="reg-hint">
+                            <i class="reg-ico-1" style="display: none;">&nbsp;</i>
+                            <i class="reg-ico-2" style="display: none;">&nbsp;</i>
+                            <span class="red" id="userNamev">用户名必须由2-10个中文字符或4-20个英文字符或下划线_组成</span>
+                    </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">姓名：</div>
+                    <div class="c2">
+                        <input maxlength="32" placeholder="姓名" value="何宇飞" id="realName" name="realName" class="txt"
+                               type="text">&nbsp;&nbsp;<em class="star">*</em>
+                    </div>
+				<span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="realNamev">真实姓名必须由2-10个中文字符组成</span>
+                </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">QQ帐号：</div>
+                    <div class="c2">
+                        <input maxlength="32" placeholder="如：3526*****" value="" id="qq" name="qq" class="txt" type="text">
+                    </div>
+				<span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="qqv"></span>
+                </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">电子邮箱：</div>
+                    <div class="c2">
+                        <input maxlength="32" placeholder="如：hng@163.com" value="" id="email" name="email" class="txt"
+                               type="text">
+                    </div>
+				<span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="emailv"></span>
+                </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">手机号码：</div>
+                    <div class="c2">
+                        <input maxlength="32" placeholder="如：139********" value="" id="mobile" name="mobile" class="txt"
+                               type="text">&nbsp;&nbsp;<em class="star">*</em>
+                    </div>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="mobilev"></span>
+                </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">固定电话：</div>
+                    <div class="c2">
+                        <input maxlength="4" value="86" class="pguodai txt" readonly="readonly" type="text"><em
+                            class="gang">-</em>
+
+                        <input placeholder="电话号码（加区号）" id="phone" name="phone" value="" class="pphone txt"
+                               type="text">
+                    </div>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="phonev"></span>
+                </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">传真：</div>
+                    <div class="c2">
+                        <input vg="1" maxlength="4" value="86" class="cguodai txt" readonly="readonly" type="text"><em
+                            class="gang">-</em>
+
+                        <input placeholder="传真号码（加区号）" id="fax" name="fax" value="" class="cphone txt" type="text">
+                    </div>
+                 <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="faxv"></span>
+                </span>
+                </div>
+
+                <div class="fieldline fd-clr" id="mem-add">
+                    <div class="c1 cradio">
+                        联系地址：
+                    </div>
+                    <div class="c2">
+                        <select class="w_100" name="province" id="provice">
+                            <option value="">待选择</option>
+                            <option value="3">河北省</option>
+                            <option value="4">山西省</option>
+                            <option value="5">内蒙古自治区</option>
+                            <option value="6">辽宁省</option>
+                            <option value="7">吉林省</option>
+                            <option value="8">黑龙江省</option>
+                            <option value="10">江苏省</option>
+                            <option value="11">浙江省</option>
+                            <option value="12">安徽省</option>
+                            <option value="13">福建省</option>
+                        </select>
+                        <select class="w_100" name="city" id="city">
+                            <option value="">待选择</option>
+                            <option value="30">宁夏回族自治区</option>
+                            <option value="31">新疆维吾尔自治区</option>
+                            <option value="32">台湾省</option>
+                            <option value="33">香港特别行政区</option>
+                            <option value="34">澳门特别行政区</option>
+                            <option value="45081">北京</option>
+                            <option value="45082">天津</option>
+                            <option value="45083">上海</option>
+                            <option value="45084">重庆</option>
+                        </select>
+                        <select class="w_100" name="area" id="area">
+                            <option value="">待选择</option>
+                            <option value="14">江西省</option>
+                            <option value="15">山东省</option>
+                            <option value="16">河南省</option>
+                            <option value="17">湖北省</option>
+                            <option value="18">湖南省</option>
+                            <option value="19">广东省</option>
+                            <option value="20">广西壮族自治区</option>
+                            <option value="21">海南省</option>
+                            <option value="23">四川省</option>
+                            <option value="24">贵州省</option>
+                            <option value="25">云南省</option>
+                            <option value="26">西藏自治区</option>
+                            <option value="27">陕西省</option>
+                            <option value="28">甘肃省</option>
+                            <option value="29">青海省</option>
+                        </select>&nbsp;<em class="star">*</em>
+                    </div>
+                    <span class="reg-hint">
+                            <i class="reg-ico-1" style="display: none;">&nbsp;</i>
+                            <i class="reg-ico-2" style="display: none;">&nbsp;</i>
+                            <span class="red" id="pcav">请完整选择省市区</span>
+                    </span>
+                </div>
+                <div class="fieldline">
+                    <div class="c1">&nbsp;</div>
+                    <div class="c2"><input maxlength="100" id="street" name="street" placeholder="街道 门牌号 大厦名称 房间号码"
+                                           value="" class="txt" type="text"></div>
+
+                </div>
+
+                <div class="submit-wrapper fd-clr">
+                    <div class="c1">&nbsp;</div>
+                    <div class="c2">
+                        <button hidefocus="true" class="submit" name="submit" type="submit">保存</button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </form>
+    <!-- Content End -->
+
+</div>
+
+
+</body>
+</html>

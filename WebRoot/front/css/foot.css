@@ -1,0 +1,12 @@
+/* 底部 */
+#footer_wrapper, #footer001, #footer002, #footer003 { width: 100%; overflow: hidden; }
+#footer_wrapper { background: rgb(239, 239, 239) none repeat scroll 0% 0%; }
+#footer003 { background: rgb(231, 231, 231) none repeat scroll 0% 0%; }
+#footer { width: 1000px; margin: 0px auto; }
+#footer a { color: rgb(61, 61, 61); }
+#footer a:hover { color: rgb(246, 120, 18); }
+
+#footer003 { text-align: center; line-height: 24px; padding: 15px 0px; }
+#footer003 .web_list a { display: inline-block; height: 16px; line-height: 16px; border-left: 1px solid; padding: 0px 6px; }
+#footer003 .f_text {  }
+#footer003 .f_imgs { padding-top: 15px; }

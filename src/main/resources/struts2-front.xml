@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	<!-- 惠农谷首页s -->
+	<package name="/front/index" namespace="/front/index" extends = "struts-default">
+		<action name="index" class="IIndexAction" method="index">
+			<result name="success">/WEB-INF/front/show/clas.jsp</result>
+		</action>
+	</package>
+	<!-- 惠农谷首页e -->
+	
+	<!-- 登录和注册s -->
+	<package name="/front/user" namespace="/front/user" extends = "struts-default">
+		<action name="login" class="IUserAction" method="login">
+			<result name="success">/WEB-INF/front/myhng/myhngframe.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+		<action name="register" class="IUserAction" method="register">
+			<result name="success">/WEB-INF/front/reglogin/regok.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/register.jsp</result>
+		</action>
+	</package>
+	<!-- 登录和注册e -->
+	
+	<!-- 会员信息s -->
+	<package name="/front/myhng" namespace="/front/myhng" extends = "struts-default">
+		<action name="getMyIndex" class="IMemberAction" method="getMyIndex">
+			<result name="success">/WEB-INF/front/myhng/myhngframe.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+		<action name="getMyIndexInfo" class="IMemberAction" method="getMyIndexInfo">
+			<result name="success">/WEB-INF/front/myhng/myIndex.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+	</package>
+	<!-- 会员信息e -->
+
+	<!-- 求购信息s -->
+	<package name="/front/buyInfo" namespace="/front/buyInfo" extends = "struts-default">
+		<!-- 发布求购信息页面 -->
+		<action name="index" class="IBuyInfoAction" method="index">
+			<result name="success">/WEB-INF/front/buy/pubBuyInfo.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+		<!-- 保存求购信息 -->
+		<action name="saveBuyInfo" class="IBuyInfoAction" method="saveBuyInfo">
+			<result name="success" type="chain">getBuyInfoByMember</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+		<!-- 获取会员求购列表 -->
+		<action name="getBuyInfoByMember" class="IBuyInfoAction" method="getBuyInfoByMember">
+			<result name="success">/WEB-INF/front/buy/mybuy.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+		<!-- 获取求购详情 -->
+		<action name="getBuyInfoById" class="IBuyInfoAction" method="getBuyInfoById">
+			<result name="pubInfo">/WEB-INF/front/buy/pubBuyInfo.jsp</result>
+			<result name="buyInfo">/WEB-INF/front/show/buyInfo.jsp</result>
+			<result name="error">/WEB-INF/front/reglogin/login.jsp</result>
+		</action>
+	</package>
+	<!-- 求购信息e -->
+	
+	<!--城市信息s -->
+	<package name="/front/city" namespace="/front/city" extends = "struts-default">
+		<!-- 省份列表 -->
+		<action name="getProvince" class="ICityAction" method="getProvince"></action>
+		<!-- 城市列表 -->
+		<action name="getCity" class="ICityAction" method="getCity"></action>
+		<!-- 区县列表 -->
+		<action name="getArea" class="ICityAction" method="getArea"></action>
+	</package>
+	<!-- 城市信息e -->
+	
+	<!--品种信息s -->
+	<package name="/front/clas" namespace="/front/clas" extends = "struts-default">
+		<!-- 一级品种列表 -->
+		<action name="getFirstClas" class="IAgriculClasAction" method="getFirstClas"></action>
+		<!-- 二级品种列表 -->
+		<action name="getSecondClas" class="IAgriculClasAction" method="getSecondClas"></action>
+		<!-- 三级品种列表 -->
+		<action name="getThirdClas" class="IAgriculClasAction" method="getThirdClas"></action>
+	</package>
+	<!-- 品种信息e -->
+
+
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->
+	<constant name="struts.action.extension" value="action" />
+
+	<!-- 当struts.xml改动后，是否重新加载。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="false" />
+
+	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.devMode" value="fasle" />
+
+	<!-- 设置浏览器是否缓存静态内容。默认值为true(生产环境下使用),开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="true" />
+
+	<!-- 指定由spring负责action对象的创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 是否开启动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+	<!-- <package name="login" extends="struts-default"></package> -->
+
+
+</struts>

@@ -1,0 +1,61 @@
+/* ::::: http://www.nongnet.com/include/css/style.css ::::: */
+
+body { font: 12px/1.5 "微软雅黑","宋体",Verdana,Arial,Helvetica,sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(51, 51, 51); }
+.content {text-align:center; width: 978px; float: left; border: 1px solid rgb(229, 229, 229); }
+A:link, A:active, A:visited { text-decoration: none; color: rgb(0, 0, 0); font-family: "Microsoft YaHei"; }
+A:hover { text-decoration: none; color: rgb(3, 93, 28); font-family: "Microsoft YaHei"; }
+A.footer:link, A.footer:active, A.footer:visited { text-decoration: none; color: rgb(68, 68, 68); }
+A.footer:hover { text-decoration: none; color: rgb(3, 93, 28); }
+.tdtitle { height: 30px; line-height: 30px; margin-bottom: 4px; padding: 0px 10px; color: rgb(51, 51, 51); font-size: 14px; font-weight: bold; border-bottom: 1px solid rgb(238, 238, 238); text-align: left; }
+td, div { font-size: 12px; color: rgb(0, 0, 0); font-family: "Microsoft YaHei"; }
+.clear { clear: both; }
+.leftmemudiv { height: 32px; }
+.rightTitle { text-align: left; font-size: 16px; font-weight: bold; padding-left: 10px; }
+.rightdivxx { text-align: left; padding: 10px; }
+.alertdivs2 { margin: 10px 10px 10px 0px; width: 950px; color: blue; text-align: left; line-height: 20px; padding: 10px; border: 2px solid rgb(9, 101, 184); }
+.style2 { width: 90px; color: rgb(0, 0, 0); }
+.style3 { width: 300px; font-weight: bold; color: rgb(0, 0, 0); }
+.style4 { width: 200px; font-weight: bold; color: rgb(0, 0, 0); }
+.fabu_title { float: left; width: 70px;  }
+.fabu_input { float: left; width: 660px; }
+.singlelinediv { padding-bottom: 5px; margin-bottom: 5px; }
+.inputsm { color: rgb(136, 136, 136); }
+.star { width: 3px; color: #ff0000; font-family: "宋体"; }
+#txtContent { height: 211px; width: 661px; }
+.datainput{
+    width: 70px;
+}
+.red{
+    font-size: 11px;
+    color: red;
+}
+.orange{font-weight: bold; color: rgb(255, 85, 0);}
+
+.ke-inline-block { display: inline-block; vertical-align: middle; }
+.ke-clearfix::after { content: "."; display: block; clear: both; font-size: 0px; height: 0px; line-height: 0; visibility: hidden; }
+.ke-icon-forecolor { background-position: 0px -384px; width: 20px; height: 16px; }
+.ke-icon-bold { background-position: 0px -416px; width: 16px; height: 16px; }
+.ke-icon-italic { background-position: 0px -432px; width: 16px; height: 16px; }
+.ke-icon-underline { background-position: 0px -448px; width: 16px; height: 16px; }
+.ke-icon-image { background-position: 0px -496px; width: 16px; height: 16px; }
+.ke-icon-fullscreen { background-position: 0px -656px; width: 16px; height: 16px; }
+.ke-container { display: block; border: 1px solid rgb(204, 204, 204); background-color: rgb(255, 255, 255); overflow: hidden; margin: 0px; padding: 0px; }
+.ke-toolbar { border-bottom: 1px solid rgb(204, 204, 204); background-color: rgb(240, 240, 238); padding: 2px 5px; text-align: left; overflow: hidden; }
+.ke-toolbar-icon { background-repeat: no-repeat; font-size: 0px; line-height: 0; overflow: hidden; display: block; }
+.ke-toolbar-icon-url { background-image: url('../images/default.png'); }
+.ke-toolbar .ke-outline { border: 1px solid rgb(240, 240, 238); margin: 1px; padding: 1px 2px; font-size: 0px; line-height: 0; overflow: hidden; cursor: pointer; display: block; float: left; }
+.ke-edit { padding: 0px; }
+.ke-edit-iframe, .ke-edit-textarea { border: 0px none; margin: 0px; padding: 0px; overflow: auto; }
+.ke-edit-textarea { font: 12px/1.5 "Consolas","Monaco","Bitstream Vera Sans Mono","Courier New",Courier,monospace; color: rgb(0, 0, 0); overflow: auto; resize: none; }
+.ke-edit-textarea:focus { outline: medium none; }
+.ke-statusbar { position: relative; background-color: rgb(240, 240, 238); border-top: 1px solid rgb(204, 204, 204); font-size: 0px; line-height: 0; overflow: hidden; text-align: center; cursor: s-resize; }
+.ke-statusbar-center-icon { background-position: 0px -754px; width: 15px; height: 11px; background-image: url('../images/default.png'); }
+.ke-statusbar-right-icon { position: absolute; right: 0px; bottom: 0px; cursor: se-resize; background-position: -5px -741px; width: 11px; height: 11px; background-image: url('../images/default.png'); }
+
+.submit-wrapper{margin-top:10px;text-align: center}
+.c1{text-align:right;margin-right:100px;}
+.c1 .submit{background-color: rgb(0, 146, 55);padding: 8px 45px;
+}
+.c2{text-align:left;}
+.submit { cursor: pointer; color: rgb(255, 255, 255); text-align: center; background-color: rgb(244, 122, 17); border-radius: 3px; padding: 8px 25px; border: medium none; }
+.submit:hover { background-color: rgb(255, 66, 0); text-decoration: none; }
