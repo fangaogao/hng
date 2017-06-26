@@ -1,0 +1,32 @@
+
+
+
+body { font: 12px/1.5 "微软雅黑","宋体",Verdana,Arial,Helvetica,sans-serif; background: rgb(255, 255, 255) none repeat scroll 0% 0%; color: rgb(51, 51, 51); }
+.content { overflow: hidden; }
+button { border: 0px none; border-radius: 3px; cursor: pointer; font-family: "微软雅黑","宋体",Verdana,Arial,Helvetica,sans-serif; }
+body {  }
+body, button, input, select, textarea { font: 12px/1.5 tahoma,arial,'微软雅黑'; }
+.content .star { width: 3px; color: #ff0000; font-family: "宋体"; }
+.main {  }
+.content { width: 978px; float: left; border: 1px solid rgb(229, 229, 229); }
+.fieldline { width: 880px; height: 45px; }
+.tab-main { margin-top: 40px ;margin-left: 100px; }
+.tab-main select { margin-right: 5px; padding: 3px; vertical-align: middle; }
+.tab-main .c1, .tab-main .c2 { display: inline; float: left; line-height: 18px; padding-bottom: 18px; }
+.tab-main .c1 { margin-right: 12px; padding-top: 3px; text-align: right; width: 138px; }
+.tab-main .c2 { width: 260px; }
+.tab-main .c2 input.txt { border: 1px solid rgb(181, 181, 181); height: 20px; line-height: 20px; padding: 2px; width: 230px; }
+.tab-main .gang { font-family: "宋体"; margin-left: 4px; }
+.tab-main .c2 input.pguodai, .tab-main .c2 input.cguodai { width: 30px; }
+.tab-main .c2 input.pphone, .tab-main .c2 input.cphone { width: 180px; }
+.w_100 { width: 72px; }
+.tab-main .submit { cursor: pointer; color: rgb(255, 255, 255); text-align: center; background-color: rgb(244, 122, 17); border-radius: 3px; padding: 8px 45px; border: medium none; }
+.tab-main .submit:hover { background-color: rgb(255, 66, 0); text-decoration: none; }
+.reg-hint { float: left; width: 340px; height: 22px; line-height: 22px; }
+.reg-hint i { margin: 2px 5px 0px 0px; }
+.reg-ico-2 { background: transparent url('../images/error.png') no-repeat scroll 0% 0%;background-size: 100%; width: 20px; height: 20px; float: left; }
+.reg-ico-1 { background: transparent url('../images/correct.png') no-repeat scroll 0% 0%;background-size: 100%; width: 20px; height: 20px; float: left; }
+.red{
+    font-size: 11px;
+    color: red;
+}

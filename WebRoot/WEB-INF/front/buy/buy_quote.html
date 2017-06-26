@@ -1,0 +1,245 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <title>我的询价信息</title>
+
+
+    <link rel="stylesheet" type="text/css" href="../../css/quote.css" media="all">
+</head>
+<body>
+
+
+<div class="main wrap">
+
+<!-- frame-container -->
+<div class="frame-container">
+    <form action="" method="post">
+        <div class="content">
+        <div class="titlebar">
+            <div class="titlebar-name">收到的报价单</div>
+        </div>
+        <div class="title-split"></div>
+        <div class="my-s-a">
+            <div class="my-s-a-a">
+                <input class="my-s-a-a-s" name="title" value="" placeholder="输入采购标题" type="text">
+                <input class="my-s-a-a-b" value="查找" onclick="javascript:$('#myPurchaseOffer').submit();"
+                       type="button">
+            </div>
+        </div>
+        <div class="my-s-b">
+            <div class="my-s-b-a">
+                <a class="cur" href="javascript:changeStatus('')" data="" id="allCount">全部(1)</a>
+                <a href="javascript:changeStatus(1)" data="1" id="purchaseing">未读(0)</a>
+                <a href="javascript:changeStatus(0)" data="0" id="checking">已读(1)</a>
+                <a href="javascript:changeStatus(2)" data="2" id="unpass">未回复(0)</a>
+                <a href="javascript:changeStatus(5)" data="5" id="end">已回复(0)</a>
+            </div>
+        </div>
+
+    <!--jqtabs-->
+    <div id="usual1" class="usual">
+        <!--<ul class="clearfix">
+            &lt;!&ndash;<li><a href="#tab0" class="" id="0">全部消息</a></li>&ndash;&gt;
+            <li><a href="#tab11" class="selected" id="11">询价信息</a></li>
+        </ul>-->
+
+        <div id="tab0" style="display: block;" class="tab">
+        <div class="letter-layout">
+        <!--查询条件开始-->
+        <div class="list">
+            <div class="list-record">
+                <input  class="sel" type="checkbox">
+                <div class="record-title fl" >
+                    <em class="no-read" id=""></em>
+                    <h2>
+                        <a href="javascript:void(0);">
+                            秦佳慧
+                        </a>
+                    </h2>
+                    <span class="time">时间：2016-04-04</span>
+                    <span id="viewtab" class="btn-view"><a href="javascript:void(0);" class="toggle-btn hide">展开</a></span>
+                </div>
+                <div class="clear"></div>
+                <div class="record-content">
+                    <div class="center-title">
+                        <a href="" target="_top">
+                            <span style="color: rgb(229, 51, 51); font-size: 14px;">正宗红富士苹果</span>
+                        </a>
+                    </div>
+                    <div class="record-content-left">
+                        <table>
+                            <tr><td class="td-t1">报价人：</td><td class="td-t23" colspan="3"><a href="aa">秦佳慧</a></td></tr>
+                            <tr><td class="td-t1">报&nbsp;&nbsp;&nbsp;价：</td><td class="td-t2" >1.5</td><td class="td-t1">供应量：</td><td class="td-t2" >1000斤</td></tr>
+                            <tr><td class="td-t1">供货地：</td><td class="td-t2" >杭州市 杭州市</td><td class="td-t1">手&nbsp;&nbsp;&nbsp;机：</td><td class="td-t2" >15263254856</td></tr>
+                            <tr><td class="td-t1">备&nbsp;&nbsp;&nbsp;注：</td><td class="td-t23"  colspan="3">请问买1000斤价格多少？</td></tr>
+                        </table>
+                    </div>
+                    <div class="record-content-right">
+                        <form action="">
+                            <!--<input type="text" class="reply-input" placeholder="请在此回复">-->
+                            <textarea rows="3" cols="45" placeholder="请在此回复"></textarea>
+                            <input type="submit" class="reply-bt" value="回复">
+                        </form>
+                    </div>
+
+                </div>
+            </div>
+            <div class="list-record">
+                <input id="1390235" class="sel" type="checkbox">
+                <div class="record-title fl" id="1390235">
+                    <em class="no-read" id="1390235_v"></em>
+                    <h2>
+                        <a href="javascript:void(0);" id="1390235">
+                            张正国
+                        </a>
+                    </h2>
+                    <span class="time">时间：2016-04-03</span>
+                    <span id="viewtab" class="btn-view"><a href="javascript:void(0);" class="toggle-btn hide">展开</a></span>
+                </div>
+                <div class="clear"></div>
+                <div class="record-content">
+                    <div class="center-title">
+                        <a href="" target="_top">
+                            <span style="color: rgb(229, 51, 51); font-size: 14px;">正宗红富士苹果</span>
+                        </a>
+                    </div>
+                    <div class="record-content-left">
+                        <table>
+                            <tr><td class="td-t1">报价人：</td><td class="td-t23" colspan="3"><a href="aa">秦佳慧</a></td></tr>
+                            <tr><td class="td-t1">报&nbsp;&nbsp;&nbsp;价：</td><td class="td-t2" >1.5</td><td class="td-t1">供应量：</td><td class="td-t2" >1000斤</td></tr>
+                            <tr><td class="td-t1">供货地：</td><td class="td-t2" >杭州市 杭州市</td><td class="td-t1">手&nbsp;&nbsp;&nbsp;机：</td><td class="td-t2" >15263254856</td></tr>
+                            <tr><td class="td-t1">备&nbsp;&nbsp;&nbsp;注：</td><td class="td-t23"  colspan="3">请问买1000斤价格多少？</td></tr>
+                        </table>
+                    </div>
+                    <div class="center-time">- 2016-04-04 -</div>
+
+                    <div class="record-content-right">
+                        2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。2.5元。欢迎咨询，电话15263256325。<br>
+                        <div class="reply">何政军</div>
+                    </div>
+
+                </div>
+            </div>
+
+            <div class="list-record">
+                <input id="1381803" class="sel" type="checkbox">
+
+                <div class="record-title fl" id="1381803">
+                    <em class="no-read" id="1381803_v"></em>
+
+                    <h2>
+                        <a href="javascript:void(0);" id="1381803">
+
+
+                            【茶陵产业带】千年国饮 始于茶陵
+
+                        </a>
+                    </h2>
+                    <span class="time">时间：2016-04-01</span>
+                    <span id="viewtab" class="btn-view"><a href="javascript:void(0);" class="toggle-btn hide">展开</a></span>
+                </div>
+                <div class="clear"></div>
+                <div class="record-content">
+                    <span style="font-size: 14px;">湖南茶陵，是个古老而神奇的地方，因地处“茶山之阴”，而中华民族始祖炎帝神龙氏“崩葬于茶乡
+                    </span>
+                    <span
+                        style="font-size: 14px;">之尾”而得名，有“犀城”之美誉。&nbsp;</span><br>
+                    <span style="font-size: 14px;">中国惠农网茶陵产业带已正式上线！茶陵三宝、中华倒刺鲃等源头好货等你来批！</span>
+                    <strong>
+                        <u><a href="" target="_top">
+                        <span style="color: rgb(229, 51, 51); font-size: 14px;">点击这里开始采购！</span>
+                        </a></u>
+                    </strong><br>
+
+                    <div class="lbanner">
+                        <a href="http://chaling.cnhnb.com/" target="_top"><img src="../../images/8e829fg46cchrkrlb-pukacsgoaalkp8fnbqu913.jpg"
+                                                                               height="180px;" width="640px;"></a>
+                    </div>
+
+                </div>
+            </div>
+
+<div class="list-del">
+    <input class="all-sel" id="all" name="all" type="checkbox">
+    <span><a class="all-sel-a" href="javascript:void(0);">全选</a></span>
+    <a class="as-read" href="javascript:void(0)">标为已读</a>
+    <a class="but all-del" href="javascript:void(0)">删除</a>
+</div>
+</div>
+<!--列表结束-->
+
+<!--分页开始-->
+
+
+<title>Insert title here</title>
+
+
+<div class="cyd_page">
+    <div class="page-bottom">
+        <a href="javascript:goTOPage(1);">第一页</a>
+        <a href="javascript:goTOPage(0)" class="noselect">上一页</a>
+
+
+        <a href="javascript:goTOPage(1)" class="page_but1hover">1
+        </a>
+
+
+        <a href="javascript:goTOPage(2)">2
+        </a>
+
+
+        <a href="javascript:goTOPage(3)">3
+        </a>
+
+
+        <a href="javascript:goTOPage(4)">4</a>
+
+        <a href="javascript:goTOPage(2)" class="last">下一页</a>
+        <a href="javascript:goTOPage(4);">最后页</a>
+    </div>
+    <div class="page-op">跳到<input value="" class="page_input" id="autoNum"
+                                  onkeyup="this.value=this.value.replace(/\D/g,'')" data-max="100" autocomplete="off"
+                                  type="text">页&nbsp; <a href="javascript:goTOPage($('#autoNum').val());"
+                                                         class="page_but2">GO</a></div>
+</div>
+
+
+<!--分页结束-->
+</div>
+
+
+</div>
+
+</div>
+</div>
+</form>
+<!-- frame-container /-->
+</div>
+<!--</div>-->
+
+<script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+<script type="text/javascript" src="../../js/hn.frame.util-0.1.js"></script>
+<script type="text/javascript" src="../../js/windows.js"></script>
+<script type="text/javascript" src="../../js/jqtabs.min.js"></script>
+<script>
+    var init = {
+        webUrl: "",
+        resoruceUrl: ""
+    }
+</script>
+<script type="text/javascript" src="../../js/quote.js"></script>
+
+
+<script>
+    var _hmt = _hmt || [];
+    (function () {
+        var hm = document.createElement("script");
+        hm.src = "";
+        var s = document.getElementsByTagName("script")[0];
+        s.parentNode.insertBefore(hm, s);
+    })();
+</script>
+</div>
+</body>
+</html>

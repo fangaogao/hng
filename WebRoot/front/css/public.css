@@ -1,0 +1,67 @@
+/*公共部分*/
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, pre, form, fieldset, input, textarea, p, blockquote, th, td, i, b { padding: 0px; margin: 0px; }
+body, button, input, select, textarea { font: 12px/1.5 "Microsoft YaHei",arial; color: rgb(62, 62, 62); }
+body { margin:0px;min-width: 1003px; }
+fieldset, img { border: 0px none; }
+address, caption, cite, code, dfn, em, th, var, i, b { font-weight: normal; font-style: normal; }
+ol, ul { list-style: outside none none; }
+h1, h2, h3, h4, h5, h6 { font-weight: normal; font-size: 100%; }
+q::before, q::after { content: ""; }
+input, textarea, a, button { outline: medium none; }
+
+.clearfix::after { visibility: hidden; display: block; font-size: 0px; content: "."; clear: both; height: 0px; }
+:first-child + html .clearfix {  }
+.clear {  }
+.clear::after { content: "."; display: block; clear: both; visibility: hidden; height: 0px; }
+a {  }
+a { text-decoration: none; }
+a:link { color: rgb(62, 62, 62); }
+a:visited { color: rgb(62, 62, 62); }
+a:hover, a:active, a:focus { color: rgb(255, 0, 0); text-decoration: underline; }
+body, div, dl, dt, dd, ul, ol, li, h1, h2, h3, h4, h5, h6, hr, p, blockquote, img, table, th, td, pre, code, form, fieldset, legend, button, input, textarea { margin: 0px; padding: 0px; }
+address, caption, cite, code, dfn, em, th, var { font-style: normal; font-weight: normal; }
+input, textarea, select { font-family: inherit; font-weight: inherit; font-size: inherit; }
+blockquote::before, blockquote::after, q::before, q::after { content: ""; }
+
+/* 首部搜索 */
+.head { width: 1003px; position: relative; margin: 0px auto; height: 120px; z-index: 99; }
+.head .logo { float: left; width: 384px; height: 120px; overflow: hidden; background: transparent url('') no-repeat scroll left top; }
+.head .logo a { display: block; width: 384px; height: 70px; margin-top: 20px; }
+.head .search{ float:right; width:515px; /* overflow:hidden; */ padding:14px 0 0 0; margin-right:18px; display:inline;}
+.head .search .sear-top{  width:466px; height:24px;  overflow:hidden;}
+.search .sear-top li{ float:left; line-height:24px; height:24px; margin-right:5px; width:55px;cursor:pointer; overflow:hidden; text-align:center;background:url(../images/search-icon-list.jpg) center ; }
+.search .sear-top .current{ color:#f47211; font-weight: bold;}
+.sear-area { width: 515px; height: 36px; margin-top: 4px; float: right; display: inline; }
+.sear-area .sear-inpt { float: left; width: 343px; height: 32px; border-width: 2px medium 2px 2px; border-style: solid none solid solid; border-color: rgb(221, 221, 221) -moz-use-text-color rgb(221, 221, 221) rgb(221, 221, 221); -moz-border-top-colors: none; -moz-border-right-colors: none; -moz-border-bottom-colors: none; -moz-border-left-colors: none; border-image: none; background: rgb(255, 255, 255) none repeat scroll 0% 0%; line-height: 32px; overflow: hidden; padding: 0px 5px; }
+.sear-area .sear-btn { float: left; width: 100px; height: 36px; border: 0px none; background: rgb(244, 114, 17) none repeat scroll 0% 0%; cursor: pointer; color: rgb(255, 255, 255); font-family:'微软雅黑'!important; font-size: 14px; }
+.sear-area .sear-btn:hover { background: rgb(255, 90, 0) none repeat scroll 0% 0%; }
+.keylist { width: 450px; margin-left: 5px; height: 30px; line-height: 30px; overflow: hidden; }
+.keylist li { float: left; margin-right: 10px; }
+.autoComplete { width: 355px; float: left; }
+.autoComplete { position: relative; float: left; }
+.autoComplete input { width: 200px; height: 25px; margin: 0px; padding: 0px; line-height: 25px; }
+.autoComplete ul { z-index: -12; padding: 0px; margin: 0px; border: 2px solid rgb(221, 221, 221); width: 451px; background: white none repeat scroll 0% 0%; display: none; position: absolute; left: 0px; top: 34px; }
+.autoComplete li { list-style: outside none none; color: rgb(153, 153, 153); line-height: 24px; }
+.autoComplete .org { border: 2px solid rgb(244, 114, 17); color: rgb(62, 62, 62); }
+.red, a.red, a.read:visited, a.red:hover { color: rgb(255, 0, 0); text-decoration: none; }
+.org, a.org, a.org:visited, a.org:hover { color: rgb(244, 121, 18); }
+
+/* 导航 */
+.navbg { width: 100%; height: 40px; margin: 0px auto; background: rgb(0, 146, 55) ; }
+.navbar { width: 1003px; height: 40px; margin: 0px auto; line-height: 40px; }
+.navbar-home { float: left; width: 1024px; height: 40px; }
+.navbar-home li { float: left; position: relative; height: 40px; width: 128px; margin-right: 0px; }
+.navbar-home li a, .navbar-home li a:visited, .navbar-home li a:hover { width: 105px; float: left; color: rgb(255, 255, 255); font-size: 14px; padding: 0px; margin-right: 23px; text-decoration: none; text-align: center; }
+.navbar-home li a:hover { color: rgb(255, 255, 255); display: block; background: rgb(0, 106, 40) none repeat scroll 0% 0%; }
+.navbar-home .current a { display: block; background: rgb(0, 106, 40) none repeat scroll 0% 0%; }
+.navbar-home .hot, .navbar-home .new { background: transparent url('../images/nav_icon_hot.png') no-repeat scroll 0% 0%; width: 16px; height: 16px; position: absolute; left: 75px; top: -4px; display: inline-block; z-index: 100; }
+/* 友情链接 */
+.txtScroll-top { width: 970px; overflow: hidden; position: relative; background: rgb(245, 245, 245) none repeat scroll 0px 0px; box-shadow: 1px 1px 2px rgb(207, 207, 207); height: 30px; line-height: 30px;
+    margin-top: 20px; margin-bottom: 20px;padding: 3px 15px; color: rgb(102, 102, 102); }
+.txtScroll-top .txtScroll-nav { float: left; }
+.txtScroll-top .bd { padding: 3px 15px; float: left; width: 830px; overflow: hidden; }
+.txtScroll-top .infoList li { height: 24px; line-height: 24px; overflow: hidden; }
+.txtScroll-top .infoList li a { margin-right: 15px; }
+.txtScroll-top a { color: rgb(102, 102, 102); }
+.txtScroll-top a:hover { color: rgb(244, 122, 17); }
+.txtScroll-top .txtScroll-more { float: right; }

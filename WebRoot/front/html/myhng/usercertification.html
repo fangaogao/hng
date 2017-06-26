@@ -1,0 +1,113 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="ks-gecko44 ks-gecko ks-firefox44 ks-firefox">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- jquery必须放在前面引用，否则可能会出错-->
+    <script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../js/iframe.js"></script>
+    <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="../../js/messages_cn.js"></script>
+    <!--window.js必须放在下面，因为必须等DOM加载完成-->
+    <script type="text/javascript" src="../../js/usercertification.js"></script>
+
+<title>个人实名认证</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/usercertification.css" media="all">
+</head>
+<body class="user-certification">
+<div class="main">
+
+<!-- Content Start -->
+    <div class="content">
+    
+        <div class="main-tips user-iteam red lh_24">
+       	 审核须知：<br>        
+        1.身份证必须上传正反两面，不能重复上传且正反必须为同一证件。<br>        
+        2.证件可以是清晰扫描件或手机拍摄图片，照片必须看清证件号、姓名且证件完整。<br>        
+        3.所填姓名与身份证上的姓名必须保持一致，且必须为第二代身份证，临时身份证、第一代身份证、过期身份证将无法通过审核。
+        </div>
+        
+        <form action="" method="post" id="ifroms">
+    	<div class="user-con">
+    	
+            <div class="user-iteam"> 
+                <span class="user-label label-left">请提交以下认证材料：</span>
+            </div>
+            <div class="user-iteam">
+                <span class="user-label">姓名：</span>
+                <input placeholder="请填写身份证上的姓名" value="" class="user-txt" id="linkMan" maxlength="20" name="linkMan"  type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+                	<span class="red" id="linkManv">用户名必须由2-10个中文字符或4-20个英文字符或下划线_组成</span>
+               </span>
+            </div>
+            <div class="user-iteam">        	
+                <span class="user-label">身份证号码：</span>
+                <input placeholder="请保证所填号码与证件一致" value="" class="user-txt" id="code" maxlength="18" name="code" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" type="text">
+                <em class="star">*</em>
+                 <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="codev"></span>
+                </span>
+            </div>
+            
+            <div class="user-iteam h_35">        	
+               
+                <div class="fl mr_10" id="uploadContainer">
+				<a style="position: relative;" href="javascript:void(0)" class="g-u ks-uploader-button input01 fl ml_10 jqModal imageUploader-button" id="uploader_img_btn"><span class="btn-text">上传图片</span><div class="file-input-wrapper" style="overflow: hidden;"><input multiple="multiple" name="filedata" hidefocus="true" class="file-input" type="file"></div><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1000;" class="drop-wrapper"></div></a>
+					<input id="J_Urls" name="refundImageUrls" type="hidden">
+				</div>
+				<span class="label-exam">示例：</span>
+                <a id="w3" href="javascript:void(0);" class="btn-1">
+                	<div class="user-cert-img"><img src="../../images/sfz.png" alt="" width="200"></div>
+				</a>
+	            <div class="user-cert-img-tips">
+	           		 总共需上传2张图片，支持jpg、png、gif格式，每张最大2M，建议上传清晰、真实图片
+	            </div>
+                <em class="star">*</em>
+                 <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="uploadPicCardv"></span>
+                </span>
+            </div>
+            <div class="clear"></div>
+            <div class="form-context">
+				<div class="clear"></div>
+				<div style="padding-left: 50px;">
+				<ul id="picture_queen" class="grid pic-gird ks-uploader-queue imageUploader-queue"></ul>
+		   </div>
+	</div>
+            
+            
+            <div id="codeImg">
+            </div>
+            <div class="user-iteam h_35">        	
+                <button type="button" class="btn-2">
+				      	提交
+               </button>
+            </div>
+        </div>
+        </form>
+        <div class="user-iteam red pt_20">   
+        （注：个人实名认证一般在工作日24小时内完成审核，审核结果请前往消息中心查看）
+        </div>
+    </div>
+<!-- Content End -->
+</div>
+
+<script type="text/javascript" src="../../js/windows.js"></script>
+<script type="text/javascript">
+$('.content').resize(function(){ 
+    var winH = $(document).height(); 
+     $(window.parent.document).find("iframe:eq(0)").height(winH + 20) ;
+});
+
+</script>
+
+</body>
+</html>

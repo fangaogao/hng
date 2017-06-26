@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:aop="http://www.springframework.org/schema/aop"
+	xmlns:tx="http://www.springframework.org/schema/tx" xmlns:context="http://www.springframework.org/schema/context"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans 
+	http://www.springframework.org/schema/beans/spring-beans.xsd
+	http://www.springframework.org/schema/aop
+	http://www.springframework.org/schema/aop/spring-aop.xsd
+    http://www.springframework.org/schema/tx
+    http://www.springframework.org/schema/tx/spring-tx.xsd
+    http://www.springframework.org/schema/context
+	http://www.springframework.org/schema/context/spring-context.xsd">
+
+    <!-- 注解配置 -->
+    <context:annotation-config />
+    
+	<!-- 扫描包 -->
+	<context:component-scan base-package="com.hng" />
+
+	<!-- Spring Bean 管理 -->
+	<bean class="com.hng.util.SpringBeanFactory" />
+
+	<!-- Tomcat JDBC -->
+	<bean id="dataSource" class="org.apache.tomcat.jdbc.pool.DataSource"
+		destroy-method="close">
+		<property name="driverClassName">
+			<value>com.mysql.jdbc.Driver</value>
+		</property>
+		<property name="url">
+			<value>jdbc:mysql://115.159.216.132:3306/hng</value>
+		</property>
+		<property name="username">
+			<value>hanma</value>
+		</property>
+		<property name="password">
+			<value>hanma!@#</value>
+		</property>
+		<property name="maxActive">
+			<value>50</value>
+		</property>
+		<property name="maxIdle">
+			<value>10</value>
+		</property>
+		<property name="initialSize">
+			<value>10</value>
+		</property>
+		<property name="validationQuery">
+			<value>SELECT 1 FROM DUAL</value>
+		</property>
+		<property name="testOnBorrow">
+			<value>true</value>
+		</property>
+		<property name="testOnReturn">
+			<value>true</value>
+		</property>
+		<property name="testWhileIdle">
+			<value>true</value>
+		</property>
+	</bean>
+
+	<!-- 注册 Hibernate -->
+	<bean id="sessionFactory"
+		class="org.springframework.orm.hibernate4.LocalSessionFactoryBean">
+		<property name="configLocations">
+			<value>classpath:hibernate.cfg.xml</value>
+		</property>
+		<property name="dataSource" ref="dataSource" />
+		<property name="packagesToScan">
+			<value>com.hng</value>
+		</property>
+	</bean>
+
+	<!-- 事务管理 -->
+	<bean id="txManager"
+		class="org.springframework.orm.hibernate4.HibernateTransactionManager">
+		<property name="sessionFactory" ref="sessionFactory" />
+	</bean>
+
+	<tx:advice id="txAdvice" transaction-manager="txManager">
+		<tx:attributes>
+			<tx:method name="save*" propagation="REQUIRED" />
+			<tx:method name="update*" propagation="REQUIRED" />
+			<tx:method name="del*" propagation="REQUIRED" />
+			<tx:method name="execute*" propagation="REQUIRED" />
+			<tx:method name="batch*" propagation="REQUIRED" />
+			<tx:method name="query*" propagation="REQUIRED" read-only="true" />
+		</tx:attributes>
+	</tx:advice>
+
+	<!-- AOP 事务处理 -->
+	<aop:config>
+		<!-- 此处一定要给dao配置事物，否则不能正常加载sessionFactory,
+		出现org.hibernate.HibernateException: No Session found for current thread   的错误 -->
+		<aop:advisor pointcut="execution(* com.hng.dao.*Dao.*(..))"
+			advice-ref="txAdvice" />
+		<aop:advisor pointcut="execution(* com.hng.service.*Service.*(..))"
+			advice-ref="txAdvice" />
+	</aop:config>
+
+</beans>

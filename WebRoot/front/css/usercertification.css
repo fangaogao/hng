@@ -1,0 +1,147 @@
+/* ::::: 个人实名认证::::: */
+
+body {  }
+body, button, input, select, textarea { font: 12px/1.5 tahoma,arial,'微软雅黑'; }
+.main {  }
+.content { width: 978px; float: left; border: 1px solid rgb(229, 229, 229); }
+.content .star {float: left; color: rgb(255, 0, 0); line-height: 30px; margin-left: 6px; font-family: "宋体"; font-style: normal; }
+.red { color: rgb(255, 0, 0); }
+.lh_24 { line-height: 24px; }
+.user-con { margin: 0px 30px 25px; padding-left: 100px; }
+.user-iteam { width: 880px; margin: 20px 50px; height: 30px; }
+.user-txt { float: left; height: 30px; line-height: 30px; width: 260px; text-indent: 10px; border: 1px solid rgb(221, 221, 221); }
+.user-label { display: inline; float: left; height: 30px; line-height: 30px; margin-left: -240px; text-align: right; width: 240px; font-size: 14px; }
+.btn-1 { width: 158px; height: 35px; line-height: 35px; font-size: 14px; display: block; float: left; margin-left: 10px; background-color: rgb(230, 230, 230); text-align: center; cursor: pointer; }
+.btn-1:hover { background-color: rgb(202, 201, 201); text-decoration: none; }
+.btn-2 { width: 158px; height: 35px; border: 0px none; line-height: 35px; font-size: 14px; display: block; float: left; background-color: rgb(255, 124, 16); text-align: center; color: rgb(255, 255, 255); cursor: pointer; }
+.btn-2:hover { background-color: rgb(224, 109, 15); text-decoration: none; }
+div.h_35 { height: 35px; }
+.user-iteam { margin-left: 50px; }
+.user-iteam a.ks-uploader-button { width: 158px; height: 35px ! important; float: left; background: transparent url('../images/choose.png') no-repeat scroll 0% 0%; border: 0px none; line-height: 35px; color: rgb(255, 255, 255); }
+.user-iteam a.ks-uploader-button .file-input-wrapper, .user-iteam a.ks-uploader-button .file-input-wrapper input.file-input { width: 158px ! important; height: 35px ! important; }
+.clear { clear: both; height: 0px; overflow: hidden; }
+.red { color: rgb(255, 0, 0); }
+.lh_24 { line-height: 24px; }
+.main-tips { width: auto; height: auto; border-bottom: 1px dashed rgb(221, 221, 221); margin: 0px 30px; padding: 15px 0px; }
+.label-left { font-size: 16px; margin-left: -180px; }
+.label-exam { margin-left: 70px; float: left; color: rgb(255, 63, 19); }
+.user-cert-img { width: 182px; height: 98px; overflow: hidden; border: 1px solid rgb(221, 221, 221); padding: 8px 0px 22px; background: rgb(255, 255, 255) url('../images/comp-cert-img.gif') no-repeat scroll right bottom; }
+.user-cert-img img { margin-left: -10px; margin-top: -10px; }
+.user-cert-img-tips { float: left; color: rgb(158, 158, 158); width: 290px; margin-left: 40px; }
+.pic-gird { padding-left: 50px; margin-top: 60px; }
+.imageUploader-queue { min-height: 10px; }
+
+.grid { letter-spacing: -0.31em; word-spacing: -0.43em; }
+button::-moz-focus-inner { border: 0px none; padding: 0px; margin: 0px; }
+.file-input-wrapper { width: 120px; height: 120px; position: absolute; z-index: 12; top: 0px; left: 0px; overflow: hidden; opacity: 0; }
+.file-input-wrapper .file-input { display: block; height: 100px; width: 100px; cursor: pointer; font-size: 100px; margin-top: -50px; position: absolute; left: 0px; top: 50px; opacity: 0; z-index: 14; }
+.ks-uploader-button { text-decoration: none; }
+.imageUploader-button { width: 74px; height: 25px; line-height: 25px; margin-right: 6px; overflow: hidden; position: relative; border: 1px solid rgb(221, 221, 221); font-size: 12px; cursor: pointer; color: rgb(51, 51, 51); text-align: center; background: transparent -moz-linear-gradient(center top , rgb(253, 252, 252), rgb(238, 238, 238)) repeat scroll 0% 0%; border-radius: 3px; }
+.imageUploader-button .file-input-wrapper { width: 74px; height: 25px; }
+.imageUploader-button:hover { color: rgb(51, 51, 51); text-decoration: none; border: 1px solid rgb(54, 155, 215); background: transparent -moz-linear-gradient(center top , rgb(253, 252, 252), rgb(226, 241, 252)) repeat scroll 0% 0%; }
+.imageUploader-button:active { background: transparent -moz-linear-gradient(center top , rgb(226, 241, 252), rgb(226, 241, 252)) repeat scroll 0% 0%; outline: 0px none; }
+.imageUploader-queue { margin: 10px 0px 0px; padding: 0px; font-size: 12px; }
+
+/*  提示信息 */
+.reg-hint { float: left; margin-left: 10px; width: 340px; height: 30px; line-height: 30px; }
+.reg-hint i { margin: 6px 5px 0px 0px; }
+.reg-ico-2 { background: transparent url('../images/error.png') no-repeat scroll 0% 0%;background-size: 100%; width: 20px; height: 20px; float: left;}
+.reg-ico-1 { background: transparent url('../images/correct.png') no-repeat scroll 0% 0%;background-size: 100%; width: 20px; height: 20px; float: left;}
+.red{
+    font-size: 12px;
+    color: red;
+}
+
+
+/*  弹窗效果  */
+.fx-w-3 {
+    margin-left: -286px;
+    margin-top: -144px;
+}
+.fx-w {
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -90px;
+    font-family: "微软雅黑";
+}
+.d-none {
+    display: none;
+}
+.fx-w-3 {
+    margin-left: -286px;
+    margin-top: -144px;
+}
+.fx-w {
+    position: fixed;
+    z-index: 9999;
+    left: 50%;
+    top: 50%;
+    margin-left: -160px;
+    margin-top: -90px;
+    font-family: "微软雅黑";
+}
+.d-none {
+    display: none;
+}
+.fx-w .fx-s-2 {
+    width: 676px;
+    height: 450px;
+    overflow: hidden;
+    border: #b9b8b8 solid 1px;
+    background-color: #fff;
+}
+.fx-w .fx-s-2 {
+    width: 676px;
+    height: 450px;
+    overflow: hidden;
+    border: #b9b8b8 solid 1px;
+    background-color: #fff;
+}
+.fx-w h2 {
+    height: 32px;
+    background-color: #f3f3f3;
+    margin: 0px;
+}
+.fx-w h2 {
+    height: 32px;
+    background-color: #f3f3f3;
+    margin: 0px;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-size: 100%;
+    font-weight: 400;
+}
+.fx-w .line {
+    display: block;
+    height: 1px;
+    border-bottom: #cccccc solid 1px;
+}
+.fx-w .line {
+    display: block;
+    height: 1px;
+    border-bottom: #cccccc solid 1px;
+}
+.fx-w .message {
+    line-height: 21px;
+    color: #585858;
+    font-size: 12px;
+}
+.fx-w .message {
+    line-height: 21px;
+    color: #585858;
+    font-size: 12px;
+}
+.mode-tc {
+    color: #f00;
+    padding: 20px;
+}
+.mode-font {
+    font-size: 14px;
+    color: #666;
+}
+.mode-tc .img {
+    padding: 15px 0;
+}

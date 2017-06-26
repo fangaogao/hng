@@ -1,0 +1,243 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html class="ks-gecko44 ks-gecko ks-firefox44 ks-firefox">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <!-- jquery必须放在前面引用，否则可能会出错-->
+    <script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+    <script type="text/javascript" src="../../js/iframe.js"></script>
+    <script type="text/javascript" src="../../js/jquery.validate.min.js"></script>
+    <script type="text/javascript" src="../../js/jquery.metadata.js"></script>
+    <script type="text/javascript" src="../../js/messages_cn.js"></script>
+    <script type="text/javascript" src="../../js/companycertification.js"></script>
+
+<title>企业实名认证</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/companycertification.css" media="all">
+</head>
+<body class="company-certification">
+<div class="main">
+<!-- Content Start -->
+    <div class="content">    
+        <div class="user-iteam red lh_24 main-tips">
+       	 审核须知：<br>        
+        1.请上传有效的营业执照与组织机构代码证照片或扫描件，已办理三证合一执照的企业，可选择三证合一认证方式进行提交资料。<br>        
+        2.所填公司名称与营业执照、组织机构代码上的名称必须一致；<br>        
+        3.证件可以是清晰扫描件或者手机拍摄图片，公司名称、有效期及证件号码必须清晰可辨。
+        </div>   
+    	<div class="user-con">
+    		<div class="user-h2-name">请选择一种方式进行提交认证材料：</div>
+            <div class="user-iteam"> 
+                <span class="user-label label-left clearfix">
+                	<label><div class="fl mr_30"><input id="licenceOld" name="type" checked="checked" reverse="licenceMerge" value="1" type="radio"> 旧版营业执照</div></label>
+                	<label><div class="fl"><input id="licenceMerge" name="type" reverse="licenceOld" value="2" type="radio"> 三证合一执照</div></label>
+                	<div class="clear"></div>
+                </span>
+            </div>
+            
+            <form action="http://hnuser.cnhnb.com/person/companyCertification?menuId=5fc5d37c-d8e9-11e4-8026-40167e2206a7" method="post" id="iforms">
+            <input name="type" id="type" type="hidden">
+	        <input id="hnUserId" name="hnUserId" value="" type="hidden">
+	        <div style="display: none;" id="picContainer">
+			</div>
+			<div style="display: none;" id="orgContainer">
+			</div>
+            <div id="licenceOldWrap"> 
+            <div class="user-iteam">        	
+                <span class="user-label">企业名称：</span>
+                <input placeholder="企业名称与证件名称需保持一致" name="companyName" id="companyName" maxlength="25" value="" class="user-txt" validate="{required:true,messages:{required:'企业名称不能为空'}}" type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="companyNamev">注：通过企业实名认证后将不能再修改，请确保填写正确</span>
+                </span>
+            </div>
+            <div class="user-iteam">        	
+                <span class="user-label">法人代表：</span>
+                <input placeholder="法人姓名与证件姓名需保持一致" value="" maxlength="20" name="laywer" id="laywer" class="user-txt" type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="laywerv"></span>
+                </span>
+            </div>
+            <div class="user-iteam">        	
+                <span class="user-label">营业执照号码：</span>
+                <input placeholder="执照号码与图片号码需保持一致" minlength="15" maxlength="18" value="" class="user-txt" name="businessLicense" id="businessLicense" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" validate="{required:true,messages:{required:'营业执照号码不能为空'}}" type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="businessLicensev"></span>
+                </span>
+            </div>
+            <div class="user-iteam h_80">        	
+                <div class="fl mr_10" id="buss">
+				<a style="position: relative;" href="javascript:void(0)" class="g-u ks-uploader-button input01 fl ml_10 jqModal imageUploader-button" id="uploader_img_btn"><span class="btn-text">上传图片</span><div class="file-input-wrapper" style="overflow: hidden;"><input multiple="multiple" name="filedata" hidefocus="true" class="file-input" type="file"></div><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1000;" class="drop-wrapper"></div></a>
+					<input id="J_Urls_1" name="refundImageUrls" type="hidden">
+				</div>
+				
+				<span class="label-exam">示例：</span>
+                <a id="w3" href="javascript:void(0);" class="btn-1 btn-width-a">
+                	<div class="comp-cert-img"><img src="../../images/yyzz.jpg" alt="" width="90"></div>
+				</a>
+				<div class="comp-cert-img-tips">
+           		 请上传1张图片，支持jpg、png、gif格式，每张最大2M，建议上传清晰、真实图片
+                <br><em class="star">*</em>
+	            </div>
+            </div>
+            <div class="clear"></div>
+           <div class="form-context">
+				<div class="clear"></div>
+				<div style="padding-left: 50px;">
+				<ul id="picture_queen_1" class="grid pic-gird ks-uploader-queue imageUploader-queue"></ul>
+		   </div>
+		   </div>
+		   
+            <div class="user-iteam">        	
+                <span class="user-label">组织机构代码证号码：</span>
+                <input placeholder="证件号码与图片号码需保持一致" value="" id="orgCode" maxlength="10" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" name="orgCode" class="user-txt" validate="{required:true,messages:{required:'组织机构代码不能为空'}}" type="text">
+                <em class="star">*</em>
+                 <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="orgCodev"></span>
+                </span>
+            </div>
+            <div class="user-iteam h_35">        	
+                <div class="fl mr_10" id="org">
+				<a style="position: relative;" href="javascript:void(0)" class="g-u ks-uploader-button input01 fl ml_10 jqModal imageUploader-button" id="uploader_img_btn"><span class="btn-text">上传图片</span><div class="file-input-wrapper" style="overflow: hidden;"><input multiple="multiple" name="filedata2" hidefocus="true" class="file-input" type="file"></div><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1000;" class="drop-wrapper"></div></a>
+					<input id="J_Urls_2" name="refundImageUrls2" type="hidden">
+				</div>
+                <span class="label-exam">示例：</span>
+                <a id="w3-1" href="javascript:void(0);" class="btn-1 btn-width-a">
+                	<div class="comp-cert-img"><img src="../../images/yyzz2.jpg" alt="" width="90"></div>
+				</a>
+				<div class="comp-cert-img-tips">
+           		 请上传1张图片，支持jpg、png、gif格式，每张最大2M，建议上传清晰、真实图片
+                <br><em class="star">*</em>
+	            </div>
+            </div>
+            <div class="clear"></div>
+             <div class="form-context2">
+				<div class="clear"></div>
+				<div style="padding-left: 50px;">
+				<ul id="picture_queen_2" class="grid pic-gird-1 ks-uploader-queue imageUploader-queue"></ul>
+	   			</div>
+	   		</div>
+            <div class="user-iteam h_35">        	
+                 <button class="btn-2" type="button">
+                提交
+                </button>
+            </div>
+            </div>
+            
+             </form>
+            <!-- 三证合一 -->
+            <form action="" method="post" id="licence">
+            <input name="type" id="typeNew" type="hidden">
+            <div style="display: none;" id="tickContainer">
+			</div>
+            <div id="licenceMergeWrap" style="display: none;">
+            <div class="user-iteam">        	
+                <span class="user-label">企业名称：</span>
+                <input placeholder="企业名称与证件名称需保持一致" name="companyName" id="companyNameNew" value="" class="user-txt" validate="{required:true,messages:{required:'企业名称不能为空'}}" type="text">
+                <em class="star">*</em>
+                <span class=" red fs_12">（注：通过企业实名认证后将不能再修改，请确保填写正确）</span>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="companyNameNewv"></span>
+                </span>
+            </div>
+            <div class="user-iteam">        	
+                <span class="user-label">法人代表：</span>
+                <input placeholder="法人姓名与证件姓名需保持一致" value="" name="laywer" id="laywerNew" class="user-txt" type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="laywerNewv"></span>
+                </span>
+            </div>
+            <div class="user-iteam">        	
+                <span class="user-label">统一社会信用代码：</span>
+                <input placeholder="执照号码与图片号码需保持一致" minlength="15" maxlength="18" value="" class="user-txt" name="tickCode" id="tickCode" onkeyup="this.value=this.value.replace(/^ +| +$/g,'')" validate="{required:true,messages:{required:'统一社会信用号码不能为空'}}" type="text">
+                <em class="star">*</em>
+                <span class="reg-hint">
+	                	<i class="reg-ico-1" style="display: none;">&nbsp;</i>
+	                	<i class="reg-ico-2" style="display: none;">&nbsp;</i>
+	                	<span class="red" id="tickCodev"></span>
+                </span>
+            </div>
+            <div class="user-iteam h_80">        	
+                <div class="fl mr_10" id="tick">
+				<a style="position: relative;" href="javascript:void(0)" class="g-u ks-uploader-button input01 fl ml_10 jqModal imageUploader-button" id="uploader_img_btn"><span class="btn-text">上传图片</span><div class="file-input-wrapper" style="overflow: hidden;"><input multiple="multiple" name="filedata" hidefocus="true" class="file-input" type="file"></div><div style="position: absolute; top: 0px; left: 0px; width: 100%; height: 100%; z-index: 1000;" class="drop-wrapper"></div></a>
+					<input id="J_Urls_3" name="refundImageUrls" type="hidden">
+				</div>
+				
+				<span class="label-exam">示例：</span>
+                <a id="w3-2" href="javascript:void(0);" class="btn-1 btn-width-a">
+                	<div class="comp-cert-img"><img src="../../images/license.jpg" alt="" height="68"></div>
+				</a>
+				<div class="comp-cert-img-tips">
+           		 请上传1张图片，支持jpg、png、gif格式，每张最大2M，建议上传清晰、真实图片
+                <br><em class="star">*</em>
+	            </div>
+            </div>
+            <div class="clear"></div>
+           <div class="form-context">
+				<div class="clear"></div>
+				<div style="padding-left: 50px;">
+				<ul id="picture_queen_3" class="grid pic-gird-1 ks-uploader-queue imageUploader-queue"></ul>
+		   </div>
+		   </div>
+
+            <div class="user-iteam h_35">        	
+                 <button class="btn-2" type="button">
+                 提交
+                </button>
+            </div>
+            </div>
+            </form>
+            
+        </div>
+	        <div class="user-iteam red pt_20">   
+	      	（注：企业实名认证一般在工作日36小时内完成审核，审核结果请前往消息中心查看）
+	        </div>
+    </div>
+<!-- Content End -->
+
+</div>
+
+
+
+<!--初始化弹窗，本页面不能删除此初始化-->
+<script type="text/javascript">
+var init={
+		resourceUrl:"",
+		userPictures:'',
+		certification:"",
+		newcertification:"",
+		orgPictures:'',
+		domainUrl:"",
+		showImg:"",
+		webUrl:"/",
+		type:"",
+		typeNew:"",
+		status:"",
+		statusNew:"",
+		tickPictures:''
+	}
+</script>
+<script type="text/javascript" src="../../js/windows.js"></script>
+<script type="text/javascript">
+$('.content').resize(function(){ 
+    var winH = $(document).height(); 
+     $(window.parent.document).find("iframe:eq(0)").height(winH + 20) ;
+});
+</script>
+
+</body>
+</html>

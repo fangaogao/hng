@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+   <!DOCTYPE struts PUBLIC
+	"-//Apache Software Foundation//DTD Struts Configuration 2.3//EN"
+	"http://struts.apache.org/dtds/struts-2.3.dtd">
+
+<struts>
+	
+	<!-- 登录注销s -->
+	<package name="/back" namespace="/back" extends = "struts-default">
+		<!-- 登录 -->
+		<action name="login" class="usersAction" method="login">
+			<result name="success">/WEB-INF/back/index.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 注销 -->
+		<action name="logout" class="usersAction" method="logout">
+			<result name="success">/login.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+	</package>
+	<!-- 登录注销e -->
+	
+	<!-- 角色管理s -->
+	<package name="/back/role" namespace="/back/role"  extends = "struts-default">
+		<!-- 角色管理页面 -->
+		<action name="index" class="roleAction" method="index">
+			<result name="success">/WEB-INF/back/sys/role.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 角色列表 -->
+		<action name="getRoleList" class="roleAction" method="getRoleList"></action>
+	</package>
+	<!-- 角色管理e -->
+	
+	<!-- 功能管理s -->
+	<package name="/back/function" namespace="/back/function"  extends = "struts-default">
+		<!-- 功能管理页面 -->
+		<action name="index" class="functionAction" method="index">
+			<result name="success">/WEB-INF/back/sys/function.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 功能列表 -->
+		<action name="getFunctions" class="functionAction" method="getFunctions"></action>
+	</package>
+	<!-- 功能管理e -->
+	
+	<!-- 品种管理s -->
+	<package name="/back/clas" namespace="/back/clas"  extends = "struts-default">
+		<!-- 品种管理页面 -->
+		<action name="index" class="agriculClasAction" method="index">
+			<result name="success">/WEB-INF/back/sys/clas.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 品种列表 -->
+		<action name="getClasList" class="agriculClasAction" method="getClasList"></action>
+	</package>
+	<!-- 品种管理e -->
+	
+	<!-- 会员管理s -->
+	<package name="/back/member" namespace="/back/member"  extends = "struts-default">
+		<!-- 会员管理页面 -->
+		<action name="index" class="memberAction" method="index">
+			<result name="success">/WEB-INF/back/user/member.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 会员列表 -->
+		<action name="getMemberList" class="memberAction" method="getMemberList"></action>
+	</package>
+	<!-- 会员管理e -->
+	
+	<!-- 求购管理s -->
+	<package name="/back/buyInfo" namespace="/back/buyInfo"  extends = "struts-default">
+		<!-- 求购管理页面 -->
+		<action name="index" class="buyInfoAction" method="index">
+			<result name="success">/WEB-INF/back/info/buyInfo.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 求购列表 -->
+		<action name="getBuyInfoList" class="buyInfoAction" method="getBuyInfoList"></action>
+	</package>
+	<!-- 求购管理e -->
+	
+	<!-- 公告管理s -->
+	<package name="/back/notice" namespace="/back/notice"  extends = "struts-default">
+		<!-- 公告管理页面 -->
+		<action name="index" class="noticeAction" method="index">
+			<result name="success">/WEB-INF/back/info/notice.jsp</result>
+			<result name="error">/login.jsp</result>
+		</action>
+		<!-- 公告列表 -->
+		<action name="getNoticeList" class="noticeAction" method="getNoticeList"></action>
+	</package>
+	<!-- 公告管理e -->
+
+
+	<!-- 请求参数的编码方式 -->
+	<constant name="struts.i18n.encoding" value="UTF-8" />
+
+	<!-- 指定被struts2处理的请求后缀类型。多个用逗号隔开 -->
+	<constant name="struts.action.extension" value="action" />
+
+	<!-- 当struts.xml改动后，是否重新加载。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.configuration.xml.reload" value="true" />
+
+	<!-- 是否使用struts的开发模式。开发模式会有更多的调试信息。默认值为false(生产环境下使用),开发阶段最好打开 -->
+	<constant name="struts.devMode" value="true" />
+
+	<!-- 设置浏览器是否缓存静态内容。默认值为true(生产环境下使用),开发阶段最好关闭 -->
+	<constant name="struts.serve.static.browserCache" value="true" />
+
+	<!-- 指定由spring负责action对象的创建 -->
+	<constant name="struts.objectFactory" value="spring" />
+
+	<!-- 是否开启动态方法调用 -->
+	<constant name="struts.enable.DynamicMethodInvocation" value="false" />
+
+	<!-- <package name="login" extends="struts-default"></package> -->
+
+
+</struts>

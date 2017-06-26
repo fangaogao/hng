@@ -1,0 +1,175 @@
+/* ::::: http://www.nongnet.com/include/css/style.css ::::: */
+
+/* 整体包装div */
+#wrapper { width: 1004px; height: auto; overflow: hidden; margin: 0px auto; }
+
+table{cellpadding:0; cellspacing:1px; width:700px;border:1px solid rgb(210, 210, 210); }
+.more{margin-top: 10px;margin-bottom: 10px; width: 699px; border: 1px solid rgb(210, 210, 210);}
+td, div { font-size: 12px; color: rgb(0, 0, 0); }
+.divltitle {
+    width: 270px; border: 1px solid rgb(221, 221, 221); background-color: rgb(252, 252, 252);margin-left: 8px; margin-bottom: 8px; text-align: left; }
+.tdtitle {
+    height: 30px; line-height: 30px; margin-bottom: 4px; padding: 0px 10px; color: rgb(51, 51, 51); font-size: 14px; font-weight: bold; border-bottom: 1px solid rgb(238, 238, 238); text-align: left;
+    background: rgb(0, 146, 55) }
+
+.t01{background: rgba(246, 135, 22, 0.95);color: #ffffff}
+.clear { clear: both; }
+.xinxisx { color: rgb(153, 153, 153); width: 90px;padding-left: 10px; float: left; font-size: 14px; height: 30px; line-height: 30px; }
+.xinxisxr { width: 550px; float: left; font-size: 14px; line-height: 30px; }
+.h1class { color:rgb(51, 51, 51);font-size: 22px; margin: 10px 0px; line-height: 26px; font-weight: bold; text-align: left; }
+
+a.f14title { font-size: 12px; }
+.listxinxidate { color: rgb(153, 153, 153); }
+.divdistitle { line-height: 26px; margin-left: 8px; }
+.disxinxicontent { width: 610px; overflow: hidden; font-size: 14px; line-height: 30px; margin-top: 10px; text-align: left; margin-bottom: 30px; }
+
+.crumbs { color: rgb(112, 112, 112); line-height: 26px; padding: 2px 0px; font-family:"tahoma","arial"; }
+.crumbs a:hover { color: rgb(238, 51, 0); }
+.crumbs strong { padding-left: 4px; }
+
+.leftbox{width: 700px; height: auto; float: left;overflow: hidden; margin-top: 10px; }
+.rightbox{width: 280px; float: left; overflow: hidden; margin-top: 15px;}
+
+.icon{
+    display: inline;
+    width: 70px; text-align: right; color: rgb(153, 153, 153); margin-left: 20px; cursor: pointer;
+ }
+.jubao{
+    width: 20px;
+    height: 20px;
+
+    margin-bottom: -5px;
+}
+a.ajubao { font-size: 12px; text-decoration: none; color: rgb(95, 95, 95); }
+a.ajubao:hover { color: rgb(3, 93, 28); text-decoration: none; }
+
+header{
+    display: block;
+}
+.detail-tit {
+    position: relative;
+    font-size: 14px;
+    line-height: 36px;
+    height: 36px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    border-bottom: 1px solid #EB753B;
+    border-left: 1px solid #E0E0E0;
+    background: #F5F5F5 none repeat scroll 0% 0%;
+}
+
+.detail-tit li.cur {
+    font-weight: 700;
+    height: 30px;
+    line-height: 30px;
+    padding: 3px 10px 3px 10px;
+
+    margin: -2px 0px 0px -1px;
+    border-top: 2px solid #EB753B;
+    border-bottom: 1px solid #FFF;
+    border-left: 1px solid #EB753B;
+    border-right: 1px solid #EB753B;
+    background-color: #ffffff;
+}
+.detail-tit ul {
+    top: 0px;
+    left: 0px;
+}
+.pa {
+    position: absolute;
+}
+.clearfix {
+    display: block;
+}
+
+.price {
+    color: #F47A11;
+    font-weight: bold;
+    font-size: 18px;
+}
+
+.ljbj1 {
+    background: transparent url("../images/purchase_home_r11_c172.jpg") repeat scroll 0% 0%;
+    width: 260px;
+    height: 50px;
+    margin: 20px 0px;
+    float: right;
+
+}
+.ljbj1 h1 {
+    display: inline;
+    color: #FFF;
+    font-size: 14px;
+    line-height: 50px;
+    padding-left: 13px;
+}
+.ljbj1 a {
+    width: 80px;
+    height: 30px;
+    line-height:30px;
+    padding: 5px 10px 5px 10px;
+    margin-left:10px ;
+    text-align: center;
+    font-size: 14px;
+    display: inline;
+    overflow: hidden;
+    background-color: #f4c919;
+    border-radius: 4px;
+}
+
+.userdiv {
+    width: 270px; border: 1px solid rgb(221, 221, 221); background-color: rgb(255, 255, 255);margin-left: 8px; margin-bottom: 8px; text-align: left;
+}
+.userdiv img { float: left; margin: 15px 15px; }
+.name{ color: rgb(149, 149, 149);font-size: 16px;height: 40px; line-height: 40px; font-weight: bold; text-align: center; }
+.zhanghu{
+    margin: 5px;
+}
+.identity{
+    height: 19px;
+    border: 0px none;
+    overflow: hidden;
+    display: inline-block;
+    margin-right: 5px;
+    background: url("../images/txbackground.gif") no-repeat;
+}
+.email{
+    background-position: -9px -188px;
+    width: 20px;
+}
+.realName{
+    background-position: -7px -154px;
+    width: 23px;
+}
+.company{
+    background-position: -7px -258px;
+    width: 24px;
+}
+
+.noemail{
+    background-position: -70px -188px;
+    width: 20px;
+}
+.norealName{
+    background-position: -68px -154px;
+    width: 23px;
+}
+.nocompany{
+    background-position: -70px -258px;
+    width: 24px;
+}
+
+.day{
+    margin: 5px 5px 0px 5px;
+    height: 30px;
+    line-height: 30px;
+    color: rgb(149, 149, 149);
+}
+.warning{
+    height: 40px;
+    line-height: 40px;
+    margin-left: 20px;
+    clear: both;
+    font-size: 12px;
+    color: #ff6c00;
+}

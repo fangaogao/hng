@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+
+    <script type="text/javascript" src="../../js/jquery-1.7.2.min.js"></script>
+    <!--window.js必须放在下面，因为必须等DOM加载完成-->
+    <script type="text/javascript" src="../../js/pwd.js"></script>
+
+<title>修改个人密码</title>
+
+<link rel="stylesheet" type="text/css" href="../../css/pwd.css" media="all">
+</head>
+<body>
+<div class="main">
+    <!-- Content Start -->
+    <div class="content">
+        <div id="updatePassword" class="popbox">
+            <div class="popcont">
+                <form action="http://hnuser.cnhnb.com/buyers/userPwd" method="post" id="iforms">
+
+
+                <table class="zh_table" border="0" cellpadding="0" cellspacing="0" width="85%">
+                  <tbody>
+                  <tr>
+                    <td width="4%">&nbsp;</td>
+                    <td class="t_r" width="24%">原始密码:</td>
+                    <td width="72%"><input id="oldPwd" name="oldPwd" minlength="6" maxlength="16" class="inpt w150" type="password"><br><span style="color: red;" class="upPwdErrInfo" id="oldPwdv"></span></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td class="t_r">新密码:</td>
+                    <td><input name="password" id="password" minlength="6" maxlength="16" class="inpt w150" type="password"><br><span style="color: red;" class="upPwdErrInfo" id="passwordv"></span></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td class="t_r">确认新密码:</td>
+                    <td><input minlength="6" maxlength="16" class="inpt w150" id="newPwd1" name="newPwd1" type="password"><br><span style="color: red;" class="upPwdErrInfo" id="newPwd1v"></span></td>
+                  </tr>
+                  <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td> <input id="updatePasswordBtn" value="确定" class="btn_org" type="button"></td>
+                  </tr>
+                </tbody></table>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+    <!-- Content End -->
+</div>
+
+<script type="text/javascript" src="../../js/windows.js"></script>
+</body>
+</html>

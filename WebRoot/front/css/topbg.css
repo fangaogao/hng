@@ -1,0 +1,292 @@
+/*顶栏*/
+.topbg {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border-bottom: 1px solid #eee;
+    height: 31px;
+    margin: auto;
+    width: 100%;
+}
+.topbar {
+    height: 31px;
+    line-height: 31px;
+    margin: 0 auto;
+    width: 999px;
+}
+.topbar-login {
+    float: left;
+    width: 450px;
+}
+.topbar-login li {
+    float: left;
+    margin-right: 20px;
+    width: auto;
+}
+.topbar-login .tp-wel {
+    color: #f00;
+    text-indent: 8px;
+}
+.topbar-login .tp-log {
+    height: 30px;
+    width: 40px;
+}
+.topbar-login .tp-log span {
+    background: #f93 none repeat scroll 0 0;
+    color: #fff;
+    font-size: 12px;
+    height: 30px;
+    width: 35px;
+}
+.topbar-login .tp-log a, .topbar-login .tp-reg a, .topbar-login .tp-log a:visited, .topbar-login .tp-reg a:visited {
+    color: #009273;
+}
+.topbar-login .tp-log a:hover, .topbar-login .tp-reg a:hover {
+    color: #f00;
+    text-decoration: none;
+}
+.topbar-name {
+    display: none;
+    float: left;
+    height: 31px;
+    padding-left: 8px;
+    width: auto;
+}
+.topbar-name li {
+    float: left;
+    position: relative;
+    width: auto;
+}
+.topbar-name li a {
+    display: inline-block;
+    font-weight: normal;
+    height: 32px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 9990;
+}
+.topbar-name li.hover a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #dfdfdf #dfdfdf -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+}
+.topbar-name li.hover {
+    line-height: 29px;
+    margin: 0 -1px -1px;
+    z-index: 9990;
+}
+.topbar-name li .tp-cont a {
+    border: medium none;
+    height: 28px;
+    padding: 0;
+}
+.topbar-name .tp-cont {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dfdfdf;
+    display: none;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 32px;
+    z-index: 10;
+}
+.topbar-name li .tp-cont dl, dt, dd {
+    margin-left: 3px;
+    text-align: left;
+}
+.topbar-name li .tp-cont a {
+    border: medium none;
+    height: 28px;
+    padding: 0;
+}
+.manage-buy, .manage-sell {
+    text-align: center;
+    width: 59px;
+}
+.topbar-menu .tp-cont .manage-buy dt a, .topbar-menu .tp-cont .manage-sell dt a {
+    font-weight: bold;
+}
+.topbar-name .myhn {
+    clear: both;
+    width: 59px;
+}
+.topbar-name .tp-nj.hover a {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: medium none;
+    width: auto;
+}
+.topbar-name .tp-nj.hover {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: medium none;
+    line-height: 31px;
+    margin: 0;
+}
+.topbar-name span {
+    width: 50px;
+}
+.topbar-menu {
+    float: right;
+    width: auto;
+}
+.topbar-menu li {
+    float: left;
+    position: relative;
+    width: auto;
+}
+.topbar-menu li a {
+    display: inline-block;
+    font-weight: normal;
+    height: 32px;
+    padding: 0 10px;
+    position: relative;
+    z-index: 9990;
+}
+.topbar-menu li a:hover {
+    text-decoration: none;
+}
+.topbar-menu .tp-cont {
+    background: #fff none repeat scroll 0 0;
+    border: 1px solid #dfdfdf;
+    display: none;
+    left: 0;
+    padding: 10px;
+    position: absolute;
+    top: 32px;
+    z-index: 10;
+}
+.topbar-menu li.hover a {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background: #fff none repeat scroll 0 0;
+    border-color: #dfdfdf #dfdfdf -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+}
+.topbar-menu li.hover {
+    line-height: 29px;
+    margin: 0 -1px -1px;
+    z-index: 9990;
+}
+.topbar-menu li .tp-cont a {
+    border: medium none;
+    height: 28px;
+    padding: 0;
+}
+.topbar-menu .myhn {
+    width: 200px;
+}
+.manage-buy, .manage-sell {
+    float: left;
+    text-align: center;
+    width: 90px;
+}
+.manage-buy {
+    margin-right: 20px;
+}
+.topbar-menu .tp-cont .manage-buy dt a, .topbar-menu .tp-cont .manage-sell dt a {
+    font-weight: bold;
+}
+.topbar-menu .tp-shop {
+    text-align: center;
+    width: 200px;
+}
+.topbar-menu .tp-service {
+    width: 80px;
+}
+.topbar-menu .tp-nj.hover a {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: medium none;
+}
+.topbar-menu .tp-nj.hover {
+    background: #f5f5f5 none repeat scroll 0 0;
+    border: medium none;
+    line-height: 31px;
+    margin: 0;
+}
+.topbar-menu .tp-center {
+    text-align: center;
+    width: 60px;
+}
+.topbar-menu .tp-map {
+    left: -480px;
+    width: 545px;
+}
+.topbar-menu .tp-map p {
+    margin-left: 5px;
+    width: 100%;
+}
+.topbar-menu .tp-map p a {
+    display: inline-block;
+    width: 77px;
+}
+.topbar-name li.hover a.msgnum, .topbar-name li a.msgnum {
+    background: #f90 none repeat scroll 0 0;
+    color: #fff;
+    height: 20px;
+    line-height: 20px;
+    margin: 3px 0 0 5px;
+    text-align: center;
+}
+.topbar-name li.tp-nj span {
+    cursor: pointer;
+    display: inline-block;
+    font-weight: normal;
+    height: 32px;
+    margin: 1px 0 0 1px;
+    padding: 0 10px;
+    position: relative;
+    width: auto;
+    z-index: 9990;
+}
+.topbar-name li.tp-nj.hover span {
+    -moz-border-bottom-colors: none;
+    -moz-border-left-colors: none;
+    -moz-border-right-colors: none;
+    -moz-border-top-colors: none;
+    background-color: #fff;
+    border-color: #dfdfdf #dfdfdf -moz-use-text-color;
+    border-image: none;
+    border-style: solid solid none;
+    border-width: 1px 1px medium;
+    height: 32px;
+    margin: 0;
+}
+.topbar-name .my-message {
+    background: #fdf3eb none repeat scroll 0 0;
+    border: 1px solid #009237;
+    border-radius: 5px;
+    clear: both;
+    color: #009237;
+    width: 230px;
+}
+.topbar-name .my-message b {
+    height: 7px;
+    left: 53px;
+    position: absolute;
+    top: -7px;
+    width: 12px;
+}
+.topbar-name .my-message .message-buy {
+    float: left;
+    text-align: center;
+    width: 230px;
+}
+.topbar-name .my-message .message-buy dt {
+    background: rgba(0, 0, 0, 0) url("../../images/correct.png") no-repeat scroll 0 10px;
+    padding-left: 20px;
+}
+.topbar-name .my-message .message-buy dd {
+    padding-left: 20px;
+}
+.topbar-name .my-message .message-buy i {
+    color: #f47a11;
+    font-weight: bold;
+    margin: 0 2px;
+}
